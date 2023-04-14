@@ -1,14 +1,15 @@
+
 const { crearArchivoTabla }=require('./helpers/multiplicar')
+require('colors')
+const argv =require('./config/yargs')
 
 console.clear()
 
-
-const [,,arg3='base=5']=process.argv;
-const[,base=5]=arg3.split('=')
-console.log(base)
+console.log(argv)
+console.log('base yargs: ', argv.base)
 
 //const base=3;
 
-crearArchivoTabla(base)
-    .then(nombreArchivo=>console.log(nombreArchivo,'creado'))
+crearArchivoTabla(argv.b, argv.l, argv.h)
+    .then(nombreArchivo=>console.log(nombreArchivo.rainbow,'creado'))
     .catch(err=>console.log(err))

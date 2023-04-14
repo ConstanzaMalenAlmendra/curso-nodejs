@@ -10,7 +10,8 @@
   "author": "Constanza Malen Almendra",
   "license": "MIT",
   "dependencies": {
-    "colors": "^1.4.0"
+    "colors": "^1.4.0",
+    "yargs": "^17.7.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
